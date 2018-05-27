@@ -3,5 +3,5 @@ node_js:
   - "9"
 
 script:
-  - yarn run lint
+  - yarn run lint:travis
   - yarn test

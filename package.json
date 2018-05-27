@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Warning: no test specified\" && exit 0",
-    "lint": "eslint **/*.js"
+    "lint": "eslint **/*.js",
+    "lint:travis": "lint-diff $TRAVIS_COMMIT_RANGE"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "eslint": "4.19.1",
     "eslint-config-airbnb-base": "12.1.0",
     "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-import": "2.12.0"
+    "eslint-plugin-import": "2.12.0",
+    "lint-diff": "1.2.0"
   }
 }
