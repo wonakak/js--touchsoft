@@ -1,0 +1,3 @@
+cd /d/Denis_Work/github_wonakak/js--touchsoft
+./node_modules/.bin/eslint task-02/denism02/**/*.js --fix
+./node_modules/.bin/eslint task-02/denism02/**/*.js

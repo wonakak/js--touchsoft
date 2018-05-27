@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>pop1</title>
+  <link rel="stylesheet" type="text/css" href="./chat-styles.css">
+</head>
+<body style="background-color: darkgray; font-family: Arial, serif;">
+<div class="mainContainer">
+  <div class="box">
+    <div id="min-chat" class="min-chat ">
+      <div class="header">
+        <span id="clear1" class="clear">Clear</span>
+        <span>Our chat logo</span>
+        <svg id="maximize" width="18" height="12">
+          <path
+              d="M17.76,8.63,11.57,2.44a.49.49,0,0,0-.11-.18L9.34.14A.52.52,0,0,0,9,0a.49.49,0,0,0-.38.14L6.44,2.26a.67.67,0,0,0-.11.18L.15,8.63a.48.48,0,0,0,0,.7l2.12,2.12a.48.48,0,0,0,.7,0l6-6,6,6a.5.5,0,0,0,.71,0l2.12-2.12A.5.5,0,0,0,17.76,8.63Z"></path>
+        </svg>
+      </div>
+    </div>
+    <div id="popup-chat" class="popup-chat hidden-chat">
+      <div class="header">
+        <span id="clear2" class="clear">Clear</span>
+        <span>Our chat logo</span>
+        <svg id="minimize" width="18" height="12">
+          <path
+              d="M17.76,8.63,11.57,2.44a.49.49,0,0,0-.11-.18L9.34.14A.52.52,0,0,0,9,0a.49.49,0,0,0-.38.14L6.44,2.26a.67.67,0,0,0-.11.18L.15,8.63a.48.48,0,0,0,0,.7l2.12,2.12a.48.48,0,0,0,.7,0l6-6,6,6a.5.5,0,0,0,.71,0l2.12-2.12A.5.5,0,0,0,17.76,8.63Z"></path>
+        </svg>
+      </div>
+
+      <div class="chatArea">
+        <div class="transcript-area">
+          <table id="transcript-list" class="transcript-list">
+          </table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <table class="commands-area">
+          <tr>
+            <td><textarea name="user-input" id="user-input" cols="40" rows="2"
+                          class="user-input"></textarea></td>
+            <td class="send-button-container">
+              <div id="user-send-button" class="send-button">Send</div>
+            <td>
+              <div id="agent-send-button" class="agent-send">A</div>
+            </td>
+            </td>
+          </tr>
+        </table>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
