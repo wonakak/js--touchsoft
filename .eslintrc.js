@@ -3,6 +3,7 @@ module.exports = {
   rules: {
     'no-var': 'off',
     'prefer-destructuring': 'off',
+    'prefer-arrow-callback': 'off',
   },
   env: {
     browser: true,
