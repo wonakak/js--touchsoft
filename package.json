@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Warning: no test specified\" && exit 0",
-    "lint": "eslint **/*.js",
+    "lint": "eslint \"**/*.js\"",
     "lint:travis": "lint-diff $TRAVIS_COMMIT_RANGE"
   },
   "repository": {
