@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chat_launcher</title>
+</head>
+<body>
+    <div>
+        <div>
+            <div>Chat Title</div>
+            <input type="text" id="touchsoft_chat-launcher_chatTitle">
+        </div>
+        <div>
+            <div>Bot Name</div>
+            <input type="text" id="touchsoft_chat-launcher_botName">
+        </div>
+        <div>
+            <div>Chat URL</div>
+            <input type="text" id="touchsoft_chat-launcher_chatUrl" value="https://touchsoftchatproject.firebaseio.com">
+        </div>
+        <div>
+            <div>CSS class</div>
+            <input type="text"  id="touchsoft_chat-launcher_chatClass">
+        </div>
+        <div>
+            <div>Position</div>
+            <select id="touchsoft_chat-launcher_chatPositionSelect">
+                <option>Right</option>
+                <option>Left</option>
+            </select>
+        </div>
+        <div>
+            <div>Allow to minimize</div>
+            <div>
+                <input type="checkbox" id="touchsoft_chat-launcher_allowMinimize">
+            </div>
+            <div>Allow drag</div>
+            <div>
+                <input type="checkbox"  id="touchsoft_chat-launcher_allowDrag">
+            </div>
+            <div>Require name</div>
+            <div>
+                <input type="checkbox"  id="touchsoft_chat-launcher_requireName">
+            </div>
+            <div>Show data/time</div>
+            <div>
+                <input type="checkbox"  id="touchsoft_chat-launcher_showTime">
+            </div>
+        </div>
+        <div>Network</div>
+        <div>
+            <form action="">
+                <div>XMR</div>
+                <input type="radio" name="contact" value="XMR" id="touchsoft_chat-launcher_networkRadioXMR" >
+                <div>fetch</div>
+                <input type="radio" name="contact" value="fetch" id="touchsoft_chat-launcher_networkRadioFetch">
+            </form>
+        </div>
+        <div id="touchsoft_chat-launcher_scriptCode">
+            &ltscript src="https://rawgit.com/UnacceptableCondition/Homework_2/master/js/chat.js?title=''&botName=''&chatUrl='https://touchsoftchatproject.firebaseio.com'&cssClass=''&position=''&allowMinimize=''&allowDrag=''&showDateTime=''&requireName=''&requests='fetch'"&gt&lt/script&gt
+        </div>
+    </div>
+
+    <!--<script src="https://rawgit.com/UnacceptableCondition/Homework_2/master/js/chatLauncher.js"></script>-->
+    <script src="../js/chatLauncher.js"></script>
+</body>
+</html>
