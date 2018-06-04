@@ -6,7 +6,8 @@ module.exports = {
     'prefer-destructuring': 'off',
     'prefer-arrow-callback': 'off',
     'prefer-template': 'off',
-    'no-param-reassign': ['error', { props: false }]
+    'no-param-reassign': ['error', { props: false }],
+    'object-shorthand': 'off'
   },
   env: {
     browser: true
