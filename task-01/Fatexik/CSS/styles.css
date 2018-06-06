@@ -1,0 +1,12 @@
+.collapsedFeedback{
+    position: fixed;
+    right: 5vw;
+    top: 80vh;
+}
+.feedBack{
+    background-color: black;
+    position: fixed;
+    border: solid;
+    right: 5vw;
+    top: 50vh;
+}
