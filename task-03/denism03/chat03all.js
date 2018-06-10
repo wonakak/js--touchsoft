@@ -373,11 +373,11 @@ window.TsChat = function MegaSuperUsefulChat(userConfig) {
 
   function addEventListenersToChat() {
     var sendButton = config.chat.querySelector('#user-send-button');
-    var agentSend = config.chat.querySelector('#agent-send-button');
+    // var agentSend = config.chat.querySelector('#agent-send-button');
     var maximize = config.chat.querySelector('#maximize');
     var minimize = config.chat.querySelector('#minimize');
     sendButton.addEventListener('click', clickOnUserSendButton);
-    agentSend.addEventListener('click', clickOnAgentSendButton);
+    // agentSend.addEventListener('click', clickOnAgentSendButton);
     maximize.addEventListener('click', maximizeChat);
     minimize.addEventListener('click', minimizeChat);
     config.chat.querySelector('#clear1').addEventListener('click',
@@ -419,7 +419,8 @@ window.TsChat = function MegaSuperUsefulChat(userConfig) {
   }
 
   window.addEventListener('load', function InitializeMegaSuperUsefulChat() {
-    if (config.viewMode === "client") {
+    console.log("View Mode = " + userConfig.viewMode);// eslint-disable-line no-console
+    if (userConfig.viewMode === undefined || userConfig.viewMode === null ||  userConfig.viewMode === "client") {
       renderClientChatContainer();
     } else {
       console.log("AGENT DASHBOARD");// eslint-disable-line no-console
