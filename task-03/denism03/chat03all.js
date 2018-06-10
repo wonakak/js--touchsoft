@@ -25,8 +25,7 @@ window.TsChat = function MegaSuperUsefulChat(userConfig) {
     maximized: localStorage.getItem('maximized') || '0',
     chat: "not rendered yet",
     msgsCount: 0,
-    transcriptArray : null,
-    viewMode : "client" // "dashboard"
+    transcriptArray : null
   };
   var dbEndpoints = {
     userSettings: "settings",
@@ -202,7 +201,7 @@ window.TsChat = function MegaSuperUsefulChat(userConfig) {
   function addedClientMessageToTranscript(/* record */) {
     // autoAnswerFromAgent(record);
   }
-
+/*
   function clickOnAgentSendButton() {
     var msg = 'agent answer';
     var record;
@@ -212,7 +211,7 @@ window.TsChat = function MegaSuperUsefulChat(userConfig) {
       appendMessageToTranscriptTree(record);
     }
   }
-
+*/
   function clickOnUserSendButton() {
     var userInput = config.chat.querySelector('#user-input');
     var msg = userInput.value;

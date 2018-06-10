@@ -1,14 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>AgDash03</title>
-	<link rel="stylesheet" type="text/css" href="./chat-styles03.css">
-	<script src="./chat03all.js"></script>
-	<script>(function(){new TsChat({"title":"AgentChat","botName":"Agent","cssClass":"YourCustomCss","position":"right","allowMinimize":true,"allowDrag":true,"showDateTime":true,"requireName":true,"requestsType":"fetch","databaseURL":"https://superchat-firebase.firebaseio.com","viewMode":"dashboard"});})();</script>
-</head>
-<body style="background-color: #c0c0c0; font-family: Arial, Consolas;">
-	<h2	>Agent Dashboard (Task-03)</h2>
+  <meta charset="UTF-8">
+  <title>AgDash03</title>
+  <script src="./agentDashboard.js"></script>
+  <script>(function(){new AgentDashboard();})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #999;
+      font-family: Arial, Consolas, serif;
+    }
 
+    .dashboard {
+
+    }
+
+    .main-dashboard {
+      height: 510px;
+    }
+
+    .border {
+      border: 2px solid black;
+      border-radius: 4px;
+    }
+
+    .column {
+      width: 33.33%;
+      padding: 10px;
+      height: 100%;
+      float: left;
+      box-sizing: border-box;
+    }
+
+    .left {
+      width: 20%;
+      height: 100%;
+    }
+
+    .center {
+      width: 80%;
+      height: 100%;
+    }
+
+    .dashboard-chat {
+      width: 35%;
+      height: 100%;
+    }
+
+    .dashboard-control {
+      width: 65%;
+      height: 100%;
+    }
+
+    .row {
+      box-sizing: border-box;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .title {
+      text-align: center;
+      font-weight: bold;
+      background-color: #8080ff;
+    }
+
+    .chat-content {
+      height: 95%;
+    }
+
+    .control-content {
+      height: 95%;
+    }
+
+    .main-panel {
+      height: 460px;
+    }
+
+    .main-panel-header {
+      height: 24px;
+      line-height: 24px;
+      vertical-align: middle;
+    }
+
+    .close-chat {
+      float: right;
+      position: relative;
+      cursor: pointer;
+      background-color: #920000;
+      border: 2px solid #920000;
+      border-radius: 2px;
+      height: 20px;
+    }
+
+    .active-user {
+      width: 100%;
+      background-color: #008000;
+      border: 2px solid #008000;
+      border-radius: 4px;
+    }
+
+    .dashboard-users {
+      height: 490px;
+    }
+
+    .dashboard-users-ul {
+      list-style: none;
+      margin: 4px 0;
+      padding: 0;
+      height: 480px;
+    }
+
+    .dashboard-users li {
+      margin: 4px 0 0 0;
+    }
+
+    .users-list {
+      list-style: none;
+      margin: 4px 0;
+      padding: 0;
+      height: 430px;
+      overflow-y: scroll;
+    }
+
+    .users-list-item {
+      border-bottom: 1px solid black;
+    }
+
+    .users-list-item:hover {
+      background-color: gold;
+    }
+
+    .active {
+      background-color: pink;
+    }
+
+    .users-filter {
+      width: 100%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+
+    .users-sort {
+      width: 100%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+
+    .agent-transcript {
+      height: 86%;
+      border-bottom: 1px solid black;
+    }
+
+    .transcript {
+      height: 99%;
+      margin-bottom: 2px;
+      margin-top: 2px;
+      overflow-y: scroll;
+    }
+
+    .agent-controls {
+      height: 56px;
+      margin: 2px;
+    }
+
+    .agent-controls-text {
+      width: 80%;
+      height: 56px;
+      float: left;
+      box-sizing: border-box;
+    }
+
+    .agent-input {
+      border: 1px solid #999999;
+      width: 96%;
+    }
+
+    .agent-controls-send {
+      width: 20%;
+      height: 52px;
+      line-height: 46px;
+      float: right;
+      box-sizing: border-box;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .agent-send-button {
+      background-color: crimson;
+      cursor: pointer;
+      height: 100%;
+    }
+    .transcript-list {
+      width: 100%;
+      table-layout: fixed;
+    }
+    .transcript-list td {
+      white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+      white-space: -webkit-pre-wrap; /*Chrome & Safari */
+      white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+      white-space: pre-wrap;       /* css-3 */
+      word-wrap: break-word;       /* Internet Explorer 5.5+ */
+      word-break: break-all;
+    }
+    .tr-client {
+      text-align: left;
+    }
+    .td-client {
+      background-color: #c0c0c0;/* azure; */
+    }
+    .user-label {
+      background-color: pink;
+      font-size: 8px;
+    }
+    .tr-agent {
+      text-align: right;
+    }
+    .td-agent {
+      background-color: #c0c0c0;/* #be2a34; */
+    }
+    .agent-label {
+      background-color: forestgreen;
+      font-size: 8px;
+    }
+    .user-info{
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div id="dashboard" class="dashboard">
+  <div class="title border"><span>Agent Dashboard</span></div>
+  <div class="row main-dashboard">
+    <div class="column left" style="background-color:#aaa;">
+      <div id="dashboard-users" class="dashboard-users">
+        <ul class="dashboard-users-ul">
+          <li>
+            <input id="users-filter" name="users-filter" title="users-filter"
+                   type="text" class="users-filter" placeholder="Filter clients by name....">
+          </li>
+          <li><select id="users-sort" name="users-sort" class="users-sort">
+            <option selected value="all">show all users</option>
+            <option value="online">show online users</option>
+            <option value="name">sort by name</option>
+            <option value="lastactive">sort by last active</option>
+          </select></li>
+          <li>
+            <ul id="users-list" class="users-list border"></ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="column center" style="background-color:#bbb;">
+      <div class="border main-panel-header">
+        <span>Active-user: </span><span id="active-user" class="active-user">Unknown</span>
+        <span class="close-chat">Close</span>
+      </div>
+      <div class="row border main-panel">
+        <div id="dashboard-chat" class="column dashboard-chat" style="background-color:#ccc;">
+          <div class="title border"><span>Chat</span></div>
+          <div class="chat-content border">
+            <div class="agent-transcript">
+              <div class="transcript">
+                <table id="transcript-list" class="transcript-list"></table>
+              </div>
+            </div>
+            <div class="agent-controls">
+              <div class="row">
+                <div class="agent-controls-text">
+                  <textarea title="agent-input" class="agent-input" id="agent-input" cols="40" rows="3"></textarea>
+                </div>
+                <div class="agent-controls-send border">
+                  <div class="agent-send-button">
+                  send
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="dashboard-control" class="column dashboard-control" style="background-color:#ddd;">
+          <div class="title border"><span>Control</span></div>
+          <div class="control-content border"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
