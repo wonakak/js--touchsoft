@@ -29,8 +29,8 @@ window.Listen2formUpdates = function MegaSuperUsefulChatForm() {
     console.log(config);// eslint-disable-line no-console
     document.getElementById("result").innerText =
         "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://rawgit.com/wonakak/js--touchsoft/master/task-02/denism02/chat-styles02.css\">"
-        + "\n<script src=\"https://rawgit.com/wonakak/js--touchsoft/master/task-02/denism02/chat02all.js\"></script>"
-        + "\n<script>(function(){new TsChat("+JSON.stringify(config)+");})();</script>";
+        + "<script src=\"https://rawgit.com/wonakak/js--touchsoft/master/task-02/denism02/chat02all.js\"></script>"
+        + "<script>(function(){new TsChat("+JSON.stringify(config)+");})();</script>";
   }
 
   function updateConfigValues(event) {
