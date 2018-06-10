@@ -1,4 +1,4 @@
-window.TsChat = function MegaSuperUsefulChat() {
+window.TsChat = function MegaSuperUsefulChat(userConfig) {
   var generateUUID = function generateUUID0() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
         function replacement0(c) {
@@ -13,13 +13,13 @@ window.TsChat = function MegaSuperUsefulChat() {
     chatUrl: "url",
     cssClass: "YourCustomCss",
     position: "right",
-    allowMinimize: true,
-    allowDrag: true,
-    showDateTime: true,
+    allowMinimize: false,
+    allowDrag: false,
+    showDateTime: false,
     requireName: false,
     userName: "Harry",
     nameVerified: false,
-    requestsType: "xhr",
+    requestsType: "fetch",
     databaseURL: "https://superchat-firebase.firebaseio.com",
     uuid: localStorage.getItem('client-uuid') || generateUUID(),
     maximized: localStorage.getItem('maximized') || '0',
@@ -334,6 +334,8 @@ window.TsChat = function MegaSuperUsefulChat() {
           person = prompt("Please enter your name", "Harry Potter");
           config.userName = person;
           config.nameVerified = true;
+          userSettings = new UserSettings(config.uuid, config.maximized, config.userName, config.msgsCount);
+          saveObjectToRemoteDatabase(dbEndpoints.userSettings, userSettings);
         }
       });
     }
@@ -389,15 +391,23 @@ window.TsChat = function MegaSuperUsefulChat() {
     loadAllTranscriptFromStorage();
   }
 
+  function readUserConfig() {
+    var keys = Object.keys(userConfig);
+    keys.forEach(function elementIds(attr) {
+      config[attr] = userConfig[attr];
+    });
+  }
+
   function renderChatContainer() {
     loadPageSection(config.requestsType,
-        'https://rawgit.com/wonakak/js--touchsoft/master/task-02/sol02/popup-template02.html',
+        'https://rawgit.com/wonakak/js--touchsoft/master/task-02/denism02/popup-template02.html',
         'div.mainContainer',
         function appendChatContainerToPage(result, err) {
           if (err === null || err === undefined) {
             result.classList.add(config.cssClass);
             document.body.appendChild(result);
             config.chat = result;
+            readUserConfig();
             addEventListenersToChat();
             restoreChatSettingsAndTranscript(); // promise callback
           } else {

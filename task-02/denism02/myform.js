@@ -8,7 +8,7 @@ window.Listen2formUpdates = function MegaSuperUsefulChatForm() {
     allowDrag: true,
     showDateTime: true,
     requireName: true,
-    requestsType: "unknown",
+    requestsType: "fetch",
     databaseURL: "https://superchat-firebase.firebaseio.com"
   };
   var elements = {
@@ -28,14 +28,16 @@ window.Listen2formUpdates = function MegaSuperUsefulChatForm() {
   function generateCodeSnippet() {
     console.log(config);// eslint-disable-line no-console
     document.getElementById("result").innerText =
-        "<script>(function(){new TsChat("+JSON.stringify(config)+");})();</script>";
+        "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://rawgit.com/wonakak/js--touchsoft/master/task-02/denism02/chat-styles02.css\">"
+        + "\n<script src=\"https://rawgit.com/wonakak/js--touchsoft/master/task-02/denism02/chat02all.js\"></script>"
+        + "\n<script>(function(){new TsChat("+JSON.stringify(config)+");})();</script>";
   }
 
   function updateConfigValues(event) {
     var target = event.target;
     var key = target.name;
     var value = target.value;
-    console.log(key + "=" + value);// eslint-disable-line no-console
+    // console.log(key + "=" + value);// eslint-disable-line no-console
     if (value === "on") { // read checked property
       if (key === "requestsType") {
         if (target.id === "reqxhr") {
@@ -53,7 +55,7 @@ window.Listen2formUpdates = function MegaSuperUsefulChatForm() {
 
   function setDefaultValues(attr, el) {
     var defvalue = config[attr];
-    console.log(attr + "||" + el + "||" + defvalue);// eslint-disable-line no-console
+    // console.log(attr + "||" + el + "||" + defvalue);// eslint-disable-line no-console
     if (defvalue !== null && defvalue !== undefined) {
       if (typeof defvalue === "boolean") {
         el.checked = true;
@@ -79,7 +81,7 @@ window.Listen2formUpdates = function MegaSuperUsefulChatForm() {
         el.addEventListener("change", updateConfigValues);
       }
     });
-    console.log(elements);// eslint-disable-line no-console
+    // console.log(elements);// eslint-disable-line no-console
     document.getElementById("generate").addEventListener("click",
         generateCodeSnippet);
   }
