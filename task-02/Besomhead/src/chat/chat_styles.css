@@ -1,0 +1,157 @@
+.chat-container {
+  position: fixed;
+  bottom: 0;
+  width: 300px;
+  border: solid 3px darkgrey;
+  border-radius: 5px;
+  z-index: 5;
+  font-family: cursive;
+  font-size: 10pt;
+  resize: none;
+  padding: 0;
+}
+
+.chat-container-right {
+  right: 0;
+}
+
+.chat-container-left {
+  left: 0;
+}
+
+.chat-expanded {
+  height: 350px;
+}
+
+.chat-collapsed {
+  height: 40px;
+}
+
+.chat-prompt-container {
+  position: absolute;
+  width: 274px;
+  height: 100px;
+  bottom: 180px;
+  z-index: 7;
+  border: solid 3px lightgrey;
+  border-radius: 5px;
+  font: inherit;
+  padding: 10px;
+}
+
+.chat-prompt-input {
+  font: inherit;
+  width: 98%;
+  outline: none;
+  border-radius: 5px;
+  border: solid lightgrey 2px;
+  padding: 2px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.chat-prompt-button {
+  font: inherit;
+  outline: none;
+  border: solid 2px lightgrey;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.chat-legend {
+  margin-left: 5px;
+}
+
+.chat-toggle-button-container {
+  position: relative;
+  width: 300px;
+  height: 30px;
+  padding: 0;
+}
+
+.chat-toggle-button-container-drag {
+  cursor: move;
+}
+
+.chat-toggle-button {
+  position: absolute;
+  right: 0;
+  margin-right: 3px;
+  width: 20px;
+  height: 21px;
+  border-radius: 3px;
+  outline: none;
+  text-align: center;
+  padding: 0;
+}
+
+.chat-day-of-month {
+  border-top: solid 2px lightgrey;
+  position: relative;
+  font: inherit;
+  text-align: center;
+}
+
+.chat-messages-external {
+  position: relative;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.chat-messages-container {
+  position: relative;
+  display: grid;
+  grid-gap: 0 10px;
+  align-content: start;
+}
+
+.chat-messages-container-with-time {
+  grid-template-columns: 35px auto auto;
+}
+
+.chat-messages-container-no-time {
+  grid-template-columns: auto auto;
+}
+
+.chat-messages-container > div {
+  text-align: left;
+  padding: 1px;
+  font-size: small;
+}
+
+.chat-input-container {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  height: 100px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+}
+
+.chat-input-textarea {
+  position: relative;
+  border: solid 2px lightgrey;
+  border-radius: 5px;
+  width: 200px;
+  outline: none;
+  resize: none;
+  font: inherit;
+  margin: 2px;
+}
+
+.chat-message-button {
+  position: relative;
+  border: solid 2px lightgrey;
+  border-radius: 5px;
+  width: 80px;
+  outline: none;
+  background: white;
+  font: inherit;
+}

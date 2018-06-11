@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat configurator</title>
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/Besomhead/js--touchsoft/besomhead-task-02/task-02/Besomhead/src/chat-config/chat_config_styles.css">
+</head>
+<body>
+<script src="https://rawgit.com/Besomhead/js--touchsoft/besomhead-task-02/task-02/Besomhead/src/chat-config/chat_config.js"></script>
+<fieldset id="chat-configurator" class="chat-configurator">
+    <legend class="chat-configurator-legend">Chat configurator</legend>
+    <div id="chat-configurator-text-params" class="chat-configurator-text-params">
+        <label for="chat-configurator-chat-title">Chat title</label>
+        <input id="chat-configurator-chat-title" type="text" class="chat-configurator-input" value="Чат">
+        <label for="chat-configurator-bot-name">Bot name</label>
+        <input id="chat-configurator-bot-name" type="text" class="chat-configurator-input" value="Бот">
+        <label for="chat-configurator-chat-url">Chat URL</label>
+        <input id="chat-configurator-chat-url" type="text" class="chat-configurator-input" value="https://besomhead-chat.firebaseio.com/">
+        <label for="chat-configurator-chat-css-class">CSS Class</label>
+        <input id="chat-configurator-chat-css-class" type="text" class="chat-configurator-input" value="chat-container">
+        <label for="chat-configurator-chat-position">Position</label>
+        <select id="chat-configurator-chat-position" size="1" class="chat-configurator-select">
+            <option id="chat-configurator-chat-position-right">Right</option>
+            <option id="chat-configurator-chat-position-left">Left</option>
+        </select>
+    </div>
+    <div id="chat-configurator-ui" class="chat-configurator-ui">
+        <div class="chat-configurator-ui-label">UI</div>
+        <div class="chat-configurator-checkbox-container">
+            <input id="chat-configurator-ui-minimize" class="chat-configurator-choose" type="checkbox" checked>
+            <label for="chat-configurator-ui-minimize">Allow to minimize</label>
+        </div>
+        <div class="chat-configurator-checkbox-container">
+            <input id="chat-configurator-ui-drag" class="chat-configurator-choose" type="checkbox">
+            <label for="chat-configurator-ui-drag">Allow drag</label>
+        </div>
+        <div class="chat-configurator-checkbox-container">
+            <input id="chat-configurator-ui-require-name" class="chat-configurator-choose" type="checkbox">
+            <label for="chat-configurator-ui-require-name">Require name</label>
+        </div>
+        <div class="chat-configurator-checkbox-container">
+            <input id="chat-configurator-ui-show-date" class="chat-configurator-choose" type="checkbox" checked>
+            <label for="chat-configurator-ui-show-date">Show date/time</label>
+        </div>
+    </div>
+    <div id="chat-configurator-network" class="chat-configurator-network">
+        <div>Network</div>
+        <div>
+            <input name="network" id="chat-configurator-network-xhr" class="chat-configurator-choose" type="radio">
+            <label for="chat-configurator-network-xhr">XHR</label>
+        </div>
+        <div>
+            <input name="network" id="chat-configurator-network-fetch" class="chat-configurator-choose" type="radio" checked>
+            <label for="chat-configurator-network-fetch">fetch</label>
+        </div>
+        <div></div>
+    </div>
+    <div id="chat-configurator-code" class="chat-configurator-code">
+        <label for="chat-configurator-code-source">Use next code:</label>
+        <textarea id="chat-configurator-code-source" class="chat-configurator-code-source" disabled></textarea>
+    </div>
+</fieldset>
+</body>
+</html>

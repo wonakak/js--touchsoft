@@ -1,0 +1,83 @@
+.chat-configurator {
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: cursive;
+  font-size: small;
+  width: 80%;
+  height: fit-content;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.chat-configurator-legend {
+  padding: 5px;
+  font: inherit;
+}
+
+.chat-configurator-text-params {
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-row-gap: 15px;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.chat-configurator-input {
+  width: 300px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  font: inherit;
+}
+
+.chat-configurator-select {
+  width: 300px;
+  border: 2px solid black;
+  outline: none;
+  font: inherit;
+}
+
+.chat-configurator-ui {
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-row-gap: 15px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.chat-configurator-ui-label {
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.chat-configurator-checkbox-container {
+  width: 150px;
+  font: inherit;
+}
+
+.chat-configurator-choose {
+  outline: none;
+}
+
+.chat-configurator-network {
+  display: grid;
+  grid-template-columns: 80px 60px auto;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font: inherit;
+}
+
+.chat-configurator-code {
+  display: grid;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  font: inherit;
+}
+
+.chat-configurator-code-source {
+  outline: none;
+  border: none;
+  resize: none;
+  height: 100px;
+  background: white;
+}
