@@ -11,6 +11,11 @@ module.exports = {
     'no-plusplus': 'off'
   },
   env: {
-    browser: true
+    browser: true,
+    node: false
+  },
+  parserOptions: {
+    sourceType: 'script',
+    ecmaFeatures: { impliedStrict: true }
   }
 };
