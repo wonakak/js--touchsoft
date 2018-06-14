@@ -8,7 +8,8 @@ module.exports = {
     'prefer-template': 'off',
     'no-param-reassign': ['error', { props: false }],
     'object-shorthand': 'off',
-    'no-plusplus': 'off'
+    'no-plusplus': 'off',
+    'prefer-rest-params': 'off'
   },
   env: {
     browser: true,
