@@ -64,14 +64,6 @@ describe('.myFilter', () => {
     assert.equal(that, context);
   });
 
-  it('use `undefined` as thisArgs by default', () => {
-    let that = 1;
-    [1].myFilter(function() {
-      that = this;
-    });
-    assert.isUndefined(that);
-  });
-
   it('call cb only on initial state of list', () => {
     const list = [1, 2, 3];
     const initialLength = list.length;
