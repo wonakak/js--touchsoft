@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Config</title>
+    <script src="config.js"></script>
+</head>
+<body style="min-width: 600px;">
+<div id="container">
+    Chat title <input type="text" id="cfg-chat-title" name="title" value="Chat" size="32"></p>
+    Bot name <input type="text" id="cfg-bot-name" name="botName" value="Bot" size="32"></p>
+    Chat URL <input type="text" id="cfg-chatURL" name="chatUrl" value="https://www.google.com/" size="32"></p>
+    CSS Class <input type="text" id="cfg-css-class" name="cssClass" value="igorbobek-my-chat" size="32"></p>
+    Position <select id="cfg-position">
+                <option value="right" name="right">Right</option>
+                <option value="left" name="left">Left</option>
+    </select></p>
+    UI <div style="margin-left: 44px">
+        <input type="checkbox" id="cfg-allow-minimize" name="allowMinimize"> Allow to minimize</p>
+        <input type="checkbox" id="cfg-allow-drag" name="allowDrag"> Allow drag</p>
+        <input type="checkbox" id="cfg-require-name" name="requireName"> Require name</p>
+        <input type="checkbox" id="cfg-show-date-time" name="showDateTime"> Show date/time</p>
+    </div>
+    Network
+    <input type="radio" id="cfg-xhr" name="requests" value="xhr" checked="true"> XHR
+    <input type="radio" id="cfg-fetch" name="requests" value="fetch"> fetch
+</div>
+<div id="result-container" style="display: flex">
+    <h4>Use next code:</h4>
+    <div id="script" style="width: 50%"></div>
+    <div id="script-url" style="width: 50%;"></div>
+</div>
+</body>
+
+</html>
