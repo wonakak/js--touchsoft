@@ -1,0 +1,141 @@
+.mainContainer {
+  font-family: Arial, serif;
+  color: #000;
+}
+.box {
+  font-family: Arial, serif;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.hidden-chat {
+  display: none;
+}
+.min-chat {
+  width: 400px;
+  height: 22px;
+  border: 2px solid #920000;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  background-color: #c0c0c0;
+}
+.popup-chat {
+  width: 400px;
+  height: 400px;
+  border: 2px solid #920000;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  background-color: #c0c0c0;
+}
+
+.header {
+  background-color: brown;/*#808000;*/
+  padding: 2px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #8080ff;
+  text-align: center;
+  padding: 1px;
+  width: 398px;
+}
+
+.chatArea {
+  /*overflow: scroll;*/
+  border: 1px solid #804000;
+}
+
+.vertical-divs {
+  border: 1px dotted black;
+  margin: 2px;
+}
+
+.transcript-area {
+  height: 330px;
+  overflow-y: scroll;
+  /*overflow-x: hidden;*/
+}
+
+.commands-area {
+  width: 100%;
+  height: 40px;
+}
+
+.user-input-container {
+  overflow: auto;
+}
+
+.user-input {
+  float: left;
+}
+
+.send-button-container {
+  background-color: olivedrab;
+}
+
+.user-send-button {
+  border: 1px solid black;
+  cursor: pointer;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.agent-send-button {
+  background-color: crimson;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 100%;
+}
+
+.transcript-list {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.transcript-list td {
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -webkit-pre-wrap; /*Chrome & Safari */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  word-break: break-all;
+  white-space: normal;
+}
+.tr-client {
+  text-align: left;
+}
+.td-client {
+  background-color: #c0c0c0;/* azure; */
+}
+.user-label {
+  background-color: pink;
+  font-size: 8px;
+}
+.tr-agent {
+  text-align: right;
+}
+.td-agent {
+  background-color: #c0c0c0;/* #be2a34; */
+}
+.agent-label {
+background-color: forestgreen;
+  font-size: 8px;
+}
+
+#maximize {
+  cursor: pointer;
+}
+
+#minimize {
+  cursor: pointer;
+}
+
+.clear {
+  border: 1px solid black;
+  background-color: gold;
+  cursor: pointer;
+}
