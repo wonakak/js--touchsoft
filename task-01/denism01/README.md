@@ -1,8 +1,2 @@
-JSBIN chat example
-https://jsbin.com/qawajedeno/edit?html,output
-
-QUnit for empty page (but it doesn't work in JSBin only locally)
-https://jsbin.com/furikufilo/edit?html,output
-
-QUnit for chat (but it doesn't work in JSBin only locally)
-https://jsbin.com/suyibehiwo/edit?html,output
+Example:
+http://htmlpreview.github.io/?https://github.com/wonakak/js--touchsoft/blob/t01/task-01/denism01/site.html
