@@ -478,7 +478,7 @@ window.TsChat = function MegaSuperUsefulChat(userConfig) {
 
     function renderChatContainer() {
         loadPageSection(config.requestsType,
-            'https://rawgit.com/wonakak/js--touchsoft/master/task-02/denism02/popup-template02.html',
+            'https://rawgit.com/wonakak/js--touchsoft/t02/task-02/denism02/popup-template02.html',
             'div.mainContainer',
             function appendChatContainerToPage(result, err) {
                 if (err === null || err === undefined) {
