@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat-Form</title>
+  <!--<script src="./myform.js"></script>-->
+  <script src="https://rawgit.com/wonakak/js--touchsoft/master/task-02/denism02/myform.js"></script>
+  <style type="text/css">
+    .form {
+      margin: 4px auto;
+      max-width: 600px;
+      padding: 2px 2px 2px 2px;
+      font: 12px "Arial", Consolas, sans-serif;
+    }
+    .form ul {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+      max-width: 600px;
+    }
+    .form li {
+      margin: 10px 0 0 0;
+    }
+    .form .flex-li {
+      display: flex;
+    }
+    .form label {
+      font-weight: bold;
+    }
+    .form input {
+      margin-left: 2em;
+      flex-grow: 1;
+    }
+    .form .button {
+      background: #4B99AD;
+      padding: 8px 15px 8px 15px;
+      border: none;
+      font-weight: bold;
+    }
+    .form .button:hover {
+      background: #8080ff;
+      box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+    .form .result {
+      max-width: 600px;
+      height: 100px;
+      border: 1px solid black;
+    }
+    .wordwrap {
+      white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+      white-space: -webkit-pre-wrap; /*Chrome & Safari */
+      white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+      white-space: pre-wrap;       /* css-3 */
+      word-wrap: break-word;       /* Internet Explorer 5.5+ */
+      word-break: break-all;
+    }
+  </style>
+  <script>
+    (function () {
+      new Listen2formUpdates();
+    })();
+  </script>
+</head>
+<body style="background-color: #c0c0c0">
+<div class="form">
+<ul>
+  <li class="flex-li"><label class="label" for="title">Title:&nbsp;</label>
+    <input id="title" name="title" class="field"/></li>
+  <li class="flex-li"><label class="label" for="botName">BotName:&nbsp;</label>
+    <input id="botName" name="botName" class="field"/></li>
+  <li class="flex-li"><label class="label" for="databaseURL">ChatUrl:&nbsp;</label>
+    <input id="databaseURL" name="databaseURL" class="field"/></li>
+  <li class="flex-li"><label class="label" for="cssClass">CssClass:&nbsp;</label>
+    <input id="cssClass" name="cssClass" class="field"/></li>
+  <li><label class="label" for="position">Position:&nbsp;</label>
+    <select id="position" name="position" class="field">
+      <option value="right">Right bottom</option>
+      <option value="left">Left bottom</option>
+    </select>
+  </li>
+  <li><label class="label" for="allowMinimize">AllowMinimize:&nbsp;</label>
+    <input id="allowMinimize" name="allowMinimize" class="field" type="checkbox"/> </li>
+  <li><label class="label" for="allowDrag">AllowDrag:&nbsp;</label>
+    <input id="allowDrag" name="allowDrag" class="field" type="checkbox"/></li>
+  <li><label class="label" for="showDateTime">ShowDateTime:&nbsp;</label>
+    <input id="showDateTime" name="showDateTime" class="field" type="checkbox"/></li>
+  <li><label class="label" for="requireName">RequireName:&nbsp;</label>
+    <input id="requireName" name="requireName" class="field" type="checkbox"/></li>
+  <li><label class="label" for="reqfet">Request type FETCH:&nbsp;</label>
+    <input name="requestsType" id="reqfet" class="field" type="radio"/></li>
+  <li><label class="label" for="reqxhr">Request type XHR:&nbsp;</label>
+    <input name="requestsType" id="reqxhr" class="field" type="radio"/></li>
+  <li class="flex-li">
+    <input id="generate" class="button" type="button" value="Click to generate js snippet"/>
+  </li>
+  <li><div id="result" class="result wordwrap"></div></li>
+</ul>
+</div>
+</body>
+</html>
