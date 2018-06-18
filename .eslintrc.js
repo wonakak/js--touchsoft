@@ -11,7 +11,7 @@ module.exports = {
     'no-plusplus': 'off',
     'prefer-rest-params': 'off',
     'import/no-unresolved': 'off',
-    'func-names': 'as-needed'
+    'func-names': ['error', 'as-needed']
   },
   env: {
     browser: true,
