@@ -131,7 +131,17 @@ const questions2 = `
 4 метода функции
 Что такое CSP ( Content Security Policy) ?`;
 
-const questions3 = ``;
+const questions3 = `
+Что такое error-first callback?
+Как узнать, поддерживается ли функционал браузером?
+Зачем нужен тип Symbol?
+Что такое и зачем нужен editorconfig?
+Что такое Emmet?
+Как можно ускорить загрузку страницы?
+Что такое мемоизация?
+Что такое чистая функция?
+Что такое "use strict"?
+`;
 
 const questions4 = ``;
 
