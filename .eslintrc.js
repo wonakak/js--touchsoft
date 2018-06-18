@@ -10,7 +10,8 @@ module.exports = {
     'object-shorthand': 'off',
     'no-plusplus': 'off',
     'prefer-rest-params': 'off',
-    'import/no-unresolved': 'off'
+    'import/no-unresolved': 'off',
+    'func-names': 'as-needed'
   },
   env: {
     browser: true,
