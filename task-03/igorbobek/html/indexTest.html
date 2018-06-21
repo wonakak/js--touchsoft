@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Test</title>
+    <script src="../js/chat.js"></script>
+    <script>
+        (function(){
+            new ChatConfig(
+                {"title":"Chatasd",
+                    "botName":"Botasd",
+                    "chatUrl":"https://chatjs-28d0b.firebaseio.com/",
+                    "cssClass":"igorbobek-my-chat",
+                    "position":"right",
+                    "allowMinimize":false,
+                    "requireName":false,
+                    "allowDrag":true,
+                    "showDateTime":true,
+                    "requests":"xhr"});
+        })();
+    </script>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.6.1.css">
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+<script src="https://code.jquery.com/qunit/qunit-2.6.1.js"></script>
+<script src="../js/test/chatTests.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+#container {
+    padding: 15px;
+    display: flex;
+}
+
+#container div {
+    margin: 8px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: unset !important;
+}
+
+#button-close-dashboard {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 0px;
+    background: red;
+    border-radius: 50%;
+    margin-top: -5px !important;
+    margin-right: 29px !important;
+    cursor: pointer;
+    text-align: center;
+    font-size: 11px;
+    font-family: cursive;
+}
+
+#menu {
+    display: table;
+    border-radius: 16px;
+    border: 1px solid #a4a4a4;
+}
+
+#filter {
+    width: 100%;
+    height: 25px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #a4a4a4;
+    box-sizing: border-box;
+    padding: 0px 14px 0px 14px;
+}
+
+#filter:focus {
+    outline: none;
+}
+
+#sort {
+    width: 100%;
+}
+
+#user-list {
+    list-style-type: none;
+    overflow: auto;
+    padding-left: 0px;
+}
+
+#user-list li {
+    padding: 10px;
+    margin-top: 3px;
+    background: aliceblue;
+    border-radius: 12px;
+    max-height: 500px;
+}
+
+#active-container {
+    width: 100%;
+    display: flex;
+    border-radius: 16px;
+    border: 1px solid #a4a4a4;
+}
+
+#control {
+    width: 100%;
+}
+#chat div{
+    margin: 0px;
+}
+
+.igorbobek-my-chat {
+    position: relative !important;
+}
+
+.igorbobek-icon-chat {
+    top: 0px !important;
+    margin-top: -23px !important;
+    position: relative !important;
+    display: table !important;
+}
+
+.igorbobek-message {
+    margin: 4px !important;
+}
+
+.user-online {
+    background: green;
+}
