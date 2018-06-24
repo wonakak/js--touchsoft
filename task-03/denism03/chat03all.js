@@ -506,7 +506,7 @@ window.TsChat = function MegaSuperUsefulChat(userConfig) {
   function syncTranscriptAndStatistics() {
     var active = new UserStatActive(Date.now());
     var msgs = new UserStatMsgs(config.transcriptArray.length);
-    console.log("update transcript form DB");  // eslint-disable-line no-console
+    // console.log("update transcript form DB");  // eslint-disable-line no-console
     readObjectFromRemoteDatabaseAndReturnJson(PROFILE_TRANSCRIPT_ENDPOINT, processTranscriptResultFromStorage);
     saveObjectToRemoteDatabase(POFILE_ACTIVE_ENDPOINT, active);
     saveObjectToRemoteDatabase(ALL_STATISTICS_ENDPOINT, new UserStatistics(active, msgs));

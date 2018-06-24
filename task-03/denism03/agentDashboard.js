@@ -307,7 +307,7 @@ window.AgentDashboard = function MegaSuperUsefulAgentDashboard() {
     listItem.classList.add("dashboard-users-li");
     listItem.addEventListener('click', handleUserChanged);
     // id="' + user.uuid + '"
-    listItem.innerHTML = '<span class="user-info">' + user.name + '</span><span class="uactive dot"></span><span class="uunread dot"></span>';
+    listItem.innerHTML = '<span class="user-info">' + user.name + '</span><span class="uactive dot red"></span><span class="uunread dot blue"></span>';
     usersList.appendChild(listItem);
   }
 
