@@ -18,26 +18,26 @@ window.AgentDashboard = function MegaSuperUsefulAgentDashboard() {
     clientSelected: false,
     requestsType: "fetch",
     activeTime: 30 * 1000, // 30 sec
-    userStats: null,
-    agentStats: null
+    userStats: null
+    // agentStats: null
   };
   var dbEndpoints = {
     userSettings: "settings",
     userMessages: "messages",
     userProfile: "profile",
     userStatistics: "statistics",
-    dashboardEl: "dashboard"
+    dashboard: "dashboard"
   };
   var ALL_SETTINGS_ENDPOINT = dbEndpoints.userSettings + '.json';
   var ALL_STATISTICS_ENDPOINT = dbEndpoints.userStatistics + '.json';
-  var DASHBOARD_STATISTICS_ENDPOINT = dbEndpoints.dashboardEl + '.json';
+  var DASHBOARD_STATISTICS_ENDPOINT = dbEndpoints.dashboard + '.json';
 
   var UserStatMsgs = function UserStatMsgs0(msgsCount) {
     this.msgsCount = msgsCount;
   };
 
   var getAgentSeenMessagesEndpoint = function () {
-    return dbEndpoints.dashboardEl + '/' + config.uuid + '.json';
+    return dbEndpoints.dashboard + '/' + config.uuid + '.json';
   };
 
   var getProfileTranscriptEndpoint = function () {
@@ -233,7 +233,7 @@ window.AgentDashboard = function MegaSuperUsefulAgentDashboard() {
     config.transcriptArray = [];
     config.clientSelected = false;
     config.userStats = null;
-    config.agetStats = null;
+    // config.agentStats = null;
   }
 
   function processTranscriptResultFromStorage(transcriptJson) {
@@ -437,14 +437,12 @@ window.AgentDashboard = function MegaSuperUsefulAgentDashboard() {
     return 0;
   }
 
-  function handleUsersSortedOrFiltered(event) {
+  function handleUsersSortedOrFiltered() {
     var value = config.usersEl.querySelector("#users-sort").value;
     var usersList = config.usersEl.querySelector("#users-list");
     var orderedList = [];
     var keys;
     var user;
-    console.log(event); // eslint-disable-line no-console
-    console.log(value); // eslint-disable-line no-console
     if (config.users !== undefined && config.users !== null) {
         keys = Object.keys(config.users);
       if (value === sortFilter.all) {
